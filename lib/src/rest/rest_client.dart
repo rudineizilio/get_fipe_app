@@ -9,9 +9,6 @@ part 'rest_client.g.dart';
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
-  //Foi adicionado o código 21 (Fiat) para facilitar e não precisar criar mais uma tela onde exibiriam as marcas.
-  //Sendo assim, sempre irá vir apenas os modelos da Fiat.
-
   //Requisição para carregar os modelos de veículos
   @GET('/modelos')
   Future<Vehicles> getVehicles();
